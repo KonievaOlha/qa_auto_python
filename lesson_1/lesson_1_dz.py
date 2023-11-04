@@ -69,9 +69,23 @@
 # print("Яблук в кошику залишиться", basket)
 
 # Завдання №11
-pencil = int(input(""))
-pen = int(input(""))
-marker = int(input(""))
+# pencil = int(input("Введіть кількість куплених олівців, кількість яких не перевищує 109: "))
+# pen = int(input("Введеть кількість куплених ручок, кількість яких не перевищує 109: "))
+# marker = int(input("Введіть кількість куплених фломастерів, кількість яких не перевищує 109:  "))
+# price_one_pencil = 3
+# price_one_pen = price_one_pencil + 2
+# price_one_marker = price_one_pen + 7
+# # print(price_one_pencil)
+# # print(price_one_pen)
+# # print(price_one_marker)
+# all_price_pencil = pencil * price_one_pencil
+# all_price_pen = pen * price_one_pen
+# all_price_marker = marker * price_one_marker
+#
+# price_all = all_price_pencil + all_price_pen + all_price_marker
+# print(price_all)
+
+# Завдання №12
 
 
 
