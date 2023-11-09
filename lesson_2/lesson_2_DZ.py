@@ -23,6 +23,24 @@
 # Задача 2
 # Текстова. в чому різниця між is та ==?
 # Різниця в тому, що оператор is порівнює по айді, а оператор == по значенню.
+# var_1 = 999
+# var_2 = 999
+#
+# if var_1 == var_2:
+#     print("var_1 рівний var_2 ")
+# else:
+#     print("var_1 не рівний var_2")
+# для точного результату (для того, щоб id відрізнялися, потрібно вводити у Terminal aбо Python Console)
+# var_1 =  999
+# var_2 =  999
+#
+# if var_1 is var_2:
+#     print("var_1 рівний var_2 ")
+# else:
+#     print("var_1 не рівний var_2")
+# print(id(var_1), id(var_2))
+
+
 
 # Задача 3
 #
@@ -82,12 +100,31 @@
 # a x 2 + bx + c = 0
 #4x2−3x+1=0
 
-a = 4
-b = 3
-c = 1
+# a = 4
+# b = 3
+# c = 1
+#
+# #equation =  a * (x**2) + b * x + c
+#
+# discriminator = (b**2) - 4 * a * c
+# print(discriminator)
+# if discriminator < 0:
+#     print("Рівняння не має дійсних коренів")
+# else:
+#
+#
 
-a * (x**2) + b * x + c
 
 
+
+# print(equation)
+
+
+var1 = 3
+
+if var1 >= 5:
+    print("1")
+else:
+    print("2")
 
 
