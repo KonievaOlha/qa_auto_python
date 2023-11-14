@@ -13,11 +13,21 @@
 #     print("Де твої батьки?")
 # elif age < 16:
 #     print("Це фільм для дорослих!")
-# elif 16 < age < 65:
+# elif 16 <= age < 65:
 #     print("Вітаємо в кінотеатрі")
 # else:
 #     print('Покажіть пенсійне посвідчення!')
 
+# Варіант №2
+# age = int(input("Введіть свій вік: "))
+# if age < 7:
+#     print("Де твої батьки?")
+# elif age < 16:
+#     print("Це фільм для дорослих!")
+# elif 16 <= age and age < 65:
+#     print("Вітаємо в кінотеатрі")
+# else:
+#     print('Покажіть пенсійне посвідчення!')
 
 
 # Задача 2
@@ -48,26 +58,29 @@
 # а можуть бути в стр). Потім запитує це стр чи інт і в залежності від відповіді конкатенує їх або додає і повертає результат перемножений на три.
 # якщо після конкатенації отримали 10 то перемноживши на 3 отримаємо 30.
 
-# number_1 = int(input("Введіть перше число: "))
-# number_2 = int(input("Введіть друге число: "))
+# number_1 = input("Введіть перше число: ")
+# number_2 = input("Введіть друге число: ")
+# number_3 = input("Введені числа str чи int: ")
 
-# if (type(number_1) == str):
-#     if (type(number_2) == str):
-#         result = number_1 + number_2
-#         print(result * 3)
-# elif (type(number_1) == int):
-#     if (type(number_2) == int):
-#         result_1 = number_1 + number_2
-#         print(result_1 * 3)
 
-# Варіант 2
-# if (type(number_1) == str):
-#     if (type(number_2) == str):
-#         result = number_1 + number_2
-#         print(result * 3)
-# else:
+# Варіант №1
+# if number_3 == "str":
 #     result_1 = number_1 + number_2
 #     print(result_1 * 3)
+# elif number_3 == "int":
+#     result_2 = int(number_1) + int(number_2)
+#     print(result_2 * 3)
+#
+# Варіант №2
+
+# if number_3 == "str":
+#     result_1 = number_1 + number_2
+#     print(int(result_1) * 3)  # якщо після конкатенації отримали 10 то перемноживши на 3 отримаємо 30
+# elif number_3 == "int":
+#     result_2 = int(number_1) + int(number_2)
+#     print(result_2 * 3)
+
+
 
 
 
