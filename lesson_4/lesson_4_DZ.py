@@ -5,32 +5,37 @@
 # потім віднімаєте суму або відсоток відповідно від ціни яку отримали раніше і пишете користувачу кінцеву суму.
 # * завдання з зірочкою не впливає на бал. Округліть суму якщо копійок більше ніж 44 то це буде + 1 гривня, якщо менше.
 # то тоді просто відкидаємо копійки від ціни.
-## import math
-# print(math.ceil(0.0001))
-# print(math.floor(1.999))
-# print(math.ceil(0.0001) == math.floor(1.999))
 
-price_of_products = input("Введіть вартість покупок через пробіл: ")
-price_of_prod = price_of_products.split()
-new_number_list = []
-print(price_of_prod)
-for element in price_of_prod:
-    new_number_list.append(int(element) + (int(element) / 100 * 6.5))
-    print(new_number_list)
-nnlist = []
-coupon = input("Маєте купон на знижку? ")
-if coupon == "так":
-    type_coupon = bool(input("Якщо купон на суму, введіть 0, якщо на відсоток, то введіть 1: "))
-    if type_coupon is True:
-        for elem in new_number_list:
-        nn_list.append(int(elem) - (int(elem) / 100 * 5))
-        print(nnlist)
-    else:
-        # for element in price_of_prod:
-        # new_number_list.append(int(element) + (int(element) / 100 * 6.5))
-        # print(new_number_list)
-else
-
+# import math
+# price_of_products = input("Введіть вартість покупок через пробіл: ")
+# price_of_prod = price_of_products.split()
+# new_number_list = []
+# print(price_of_prod)
+# for element in price_of_prod:
+#     new_number_list.append(int(element) + ((int(element) * 6.5 )/ 100))
+# print(new_number_list)
+# s_list = sum(new_number_list)
+# print(s_list)
+# # nn_list = []
+# coupon = input("Маєте купон на знижку? Введіть так,якщо маєте, або ні, якщо не маєте ")
+# if coupon == "так":
+#     type_coupon = input("Якщо купон на суму, введіть 0, якщо на відсоток, то введіть 1: ")
+#     if type_coupon == "1":
+#         sum_coupon = s_list - ((s_list * 5) / 100)
+#         print(sum_coupon)
+#         if sum_coupon % 1 > 0.44:
+#             print(f"Сума Ваших покупок = {math.ceil(sum_coupon)}")
+#         else:
+#             print(f"Сума Ваших покупок = {math.floor(sum_coupon)}")
+#     elif type_coupon == "0":
+#         sum_coupon = s_list - 10
+#         print(sum_coupon)
+#         if sum_coupon % 1 > 0.44:
+#             print(f"Сума Ваших покупок = {math.ceil(sum_coupon)}")
+#         else:
+#             print(f"Сума Ваших покупок = {math.floor(sum_coupon)}")
+# else:
+#     print(f"Сума Ваших покупок = {s_list}! Гарного дня!")
 
 # Задача 3
 # Напишіть програму Банкомат. Втсановіть пін код для користувача(зробимо це константою).
@@ -66,7 +71,6 @@ else
 # format_string = тут ваш код формата формат стрінг | повино вийти -> Я Олена, мені 21 рік
 # print(f_string)
 # print(format_string)
-
 
 # name = "оЛенА"
 # age = 21
