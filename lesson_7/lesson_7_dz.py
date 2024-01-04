@@ -13,7 +13,6 @@
 
 list_growth = [100, 13, 79, 1, 25]
 list_words = ["яблоко", "апельсин", "вікно", "мило", "гелікоптер"]
-list_growth_for_assert = []
 
 
 def sort_list_growth(list_growth_d: list) -> list:
@@ -33,14 +32,6 @@ def sort_list_words(list_words_d: list) -> list:
     print(list_words_d)
     return list_words_d
 
-
-def sort_list_growth_for_assert(list_growth_for_assert_d: list) -> list:
-    list_growth_for_assert_d.sort()
-    print(list_growth_for_assert_d)
-    return list_growth_for_assert_d
-
-
 # sort_list_growth(list_growth)
 # sort_list_desc(list_growth)
 # sort_list_words(list_words)
-# sort_list_growth_for_assert(list_growth_for_assert)
