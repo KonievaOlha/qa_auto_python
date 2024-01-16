@@ -4,7 +4,7 @@
 # трьома методами
 # 4) перепишіть декоратор який заміряє час з уроку в домашку, можете його поклацати, як він працює
 # Завдання 1
-#
+# https://github.com/KonievaOlha/qa_auto_python/blob/main/requirements
 # Завдання 2
 def audit_error(elem: int) -> int:
     try:
