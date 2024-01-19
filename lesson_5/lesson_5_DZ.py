@@ -4,10 +4,27 @@
 # Коли ви підготуєте це, запитайте в користувача яку табличку він хоче побачити
 # (додавання, віднімання, множення, ділення). і виведіть йому цю табличку.
 
-for i in range(2, 10):
-    for j in range(2, 10):
-        print(f"{i}*{j}={i*j}", sep='\t')
-    print()
 
+dict_table = {"*": [],
+              "/": [],
+              "+": [],
+              "-": []}
+input_sign = input("Введіть дію, таблицю якої хотіли б вивести на екран: ")
+for numb_1 in range(2, 10):
+    for numb_2 in range(2, 10):
+        dict_table["*"].append(f"{numb_1}*{numb_2}={numb_1 * numb_2}")
+        dict_table["/"].append(f"{numb_1}/{numb_2}={numb_1 / numb_2}")
+        dict_table["+"].append(f"{numb_1}+{numb_2}={numb_1 + numb_2}")
+        dict_table["-"].append(f"{numb_1}-{numb_2}={numb_1 - numb_2}")
 
-dict_table = {"+":["a", "b"],}
+if input_sign == "*":
+    print(f"{dict_table.get('*')}")
+
+elif input_sign == "/":
+    print(dict_table.get("/"))
+elif input_sign == "+":
+    print(dict_table.get("+"))
+elif input_sign == "-":
+    print(dict_table.get("-"))
+else:
+    print(dict_table)
