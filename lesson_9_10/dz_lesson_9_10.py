@@ -56,3 +56,6 @@ def add_numbers(num_1: int | float, num_2: int | float, num_3: int | float) -> i
 #     with open("log.txt", "a") as file:
 #         file.write("\n")
 #         file.write(f"var1 = {num_1},var2={num_2}, var3 = {num_3}, result = {add_result}")
+
+
+# add_numbers(1, 2, 3)
