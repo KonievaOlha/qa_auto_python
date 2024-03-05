@@ -1,8 +1,7 @@
-import time
-
+# import time
 import pytest
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webdriver import WebDriver
+# from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
@@ -15,10 +14,10 @@ class TestWaiters:
     def test_connection(self):
         self.driver.get("https://demoqa.com/dynamic-properties")
         visible_invisible_button_loc = (By.CSS_SELECTOR, "#visibleAfter")  # = (By.ID, "visibleAfter")
-        ##explicity wait start##
+        # explicity wait start
         WebDriverWait(self.driver, timeout=5).until(ec.visibility_of_element_located(visible_invisible_button_loc))
         visible_invisible_button: WebElement = self.driver.find_element(*visible_invisible_button_loc)
-        ##explicity wait end##
+        # explicity wait end
         visible_invisible_button.click()
         assert visible_invisible_button.is_enabled()
         # todo завершити тест на те що кнопка є ._is...
@@ -40,4 +39,4 @@ class TestWaiters:
             ec.text_to_be_present_in_element_attribute(colored_button_loc, "class", "text-danger"))
         colored_button.click()
         assert colored_button.is_enabled()
-        #todo завершити тест на те що кнопка є ._is...
+        # todo завершити тест на те що кнопка є ._is...
