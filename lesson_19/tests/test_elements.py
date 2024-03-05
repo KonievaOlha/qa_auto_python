@@ -1,8 +1,7 @@
 import pytest
 from selenium.webdriver.remote.webelement import WebElement
-
-from lesson_19.DynamicPropertiesPage import PageDynamicProperties
-from lesson_19.ElementsPage import ElementsPage
+from qa_auto_python.lesson_19.DynamicPropertiesPage import PageDynamicProperties
+from qa_auto_python.lesson_19.ElementsPage import ElementsPage
 
 
 class TestElementsPage:
