@@ -10,7 +10,7 @@ def foo(number_2:int, number_1: int) -> int:
     return result
 
 # use default only when your func need it. Не ставимо дефолт і не використовуємно інпут в оголошені функції.
-# ENV and requirements.txt коли беремо новий проект дивимось його релізи на pypi.org
+# ENV and requirements.txt.txt коли беремо новий проект дивимось його релізи на pypi.org
 # Exceptions
 
 # try:
@@ -93,7 +93,7 @@ def bar_2(*arg, **kwarg):
 # bar_1(333)
 # bar_2(333)
 
-from datetime import datetime1
+from datetime import datetime
 
 def func_wrapper_time(func):
     def wrapper(*arg, **kwarg):
