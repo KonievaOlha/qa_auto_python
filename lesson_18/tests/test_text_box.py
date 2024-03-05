@@ -1,7 +1,6 @@
-import pytest
-
-from lesson_18.TextBoxPage_1 import TextBoxPage
-import time
+# import pytest
+from qa_auto_python.lesson_18.TextBoxPage import TextBoxPage
+# import time
 
 
 class TestTextBox:
