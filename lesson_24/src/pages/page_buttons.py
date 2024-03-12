@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from qa_auto_python.lesson_24.widget.components import Button
 
-from Hillel_october_23.lesson_24.widgets.components import Button
 
 class PageButtons:
     _instance = None
@@ -13,8 +13,7 @@ class PageButtons:
             cls._instance = super().__new__(cls)
         return cls._instance
 
-
-    def __init__(self, driver:WebDriver):
+    def __init__(self, driver: WebDriver):
         self.driver = driver
         self.button_doubleclick_loc = (By.ID, "doubleClickBtn")
         self.button_right_click_loc = (By.ID, "rightClickBtn")
@@ -22,7 +21,6 @@ class PageButtons:
         self.button_doubleclick_message_loc = (By.ID, "doubleClickMessage")
         self.button_right_click_message_loc = (By.ID, "rightClickMessage")
         self.button_dynamic_id_click_message_loc = (By.ID, "dynamicClickMessage")
-
 
     def open(self):
         self.driver.get(self.URL)
@@ -39,3 +37,9 @@ class PageButtons:
 
     def get_button_dynamic_id_click_message(self) -> str:
         return self.driver.find_element(*self.button_dynamic_id_click_message_loc).text
+
+    def button_right_click(self):
+        return Button(self.driver, self.button_right_click_loc)
+
+    def button_dynamic_click(self):
+        return Button(self.driver, self.button_dynamic_id_loc)

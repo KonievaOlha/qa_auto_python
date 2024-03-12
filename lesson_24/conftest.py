@@ -23,6 +23,7 @@ def firefox(request):
 @pytest.fixture(scope="class")
 def chrome_class(request):
     driver = webdriver.Chrome()
+    driver.maximize_window()
     request.cls.driver = driver
     yield driver
     driver.quit()
