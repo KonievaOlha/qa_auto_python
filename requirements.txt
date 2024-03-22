@@ -6,4 +6,6 @@ pytest-xdist == 3.5.0
 flake8 == 7.0.0
 selenium
 pysqlite3==0.5.2
+pytest==8.0.0
+pytest-xdist==3.5.0
 
