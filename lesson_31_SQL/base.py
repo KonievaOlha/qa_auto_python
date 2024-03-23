@@ -3,7 +3,7 @@ import pytest
 import sqlite3
 
 
-# @pytest.mark.usefixtures("base_fixture")
+@pytest.mark.usefixtures("base_fixture")
 class MobilePhone:
 
     def __init__(self, name, model, price, shops):
@@ -13,15 +13,15 @@ class MobilePhone:
         self.shops = shops
 
     def __repr__(self):
-        return f"Phone(name={self.name}, item={self.model}, deal={self.price}, price={self.shops})"
+        return f"Phones(name={self.name}, item={self.model}, deal={self.price}, price={self.shops})"
 
     def get_phone_attributes(self):
         return self.name, self.model, self.price, self.shops
 
 
 class AbstractRepository:
-    def __init__(self, base111):
-        self._connection = sqlite3.connect(base111, isolation_level=None)
+    def __init__(self, base_15):
+        self._connection = sqlite3.connect(base_15, isolation_level=None)
         self._cursor = self._connection.cursor()
 
     def __del__(self):
@@ -33,9 +33,9 @@ class AbstractRepository:
 
 
 class ReposMobPh(AbstractRepository):
-    def __init__(self, base111):
-        super(ReposMobPh, self).__init__(base111)
-        self._cursor.execute("CREATE TABLE IF NOT EXISTS Phones_hw(phones_id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE, model TEXT, price REAL, shops TEXT);")
+    def __init__(self, base_15):
+        super(ReposMobPh, self).__init__(base_15)
+        self._cursor.execute("CREATE TABLE IF NOT EXISTS Phones(phones_id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE, model TEXT, price REAL, shops TEXT);")
 
     # def add_new_model(self, phone: MobilePhone):
     #     self._cursor.execute("INSERT INTO Phones_hw(name, model, price, shops) VALUES ((?), (?), (?), (?));", phone.get_phone_attributes())
@@ -43,19 +43,19 @@ class ReposMobPh(AbstractRepository):
     # def add_new_models(self, phones):
     #     self._cursor.executemany("INSERT INTO Phones_hw(name, model, price, shops) VALUES ((?), (?), (?), (?));", [phones.get_phone_attributes() for phones in phones])
 
-    def get_all_phone_models(self):
-        ph_mod = self._cursor.execute("SELECT * from Phones_hw")
-        return self.rows2objects(ph_mod)
-
-    def get_phones_by_breakage(self):
-        breakage_name = self._cursor.execute('SELECT * from Phones_hw WHERE name = (?)', (name, ))
-        return self.rows2objects(breakage_name)
-
-    def row2object(self, row):
-        return MobilePhone(*row[1:])
-
-    def rows2objects(self, rows):
-        return [self.row2object(row) for row in rows]
+    # def get_all_phone_models(self):
+    #     ph_mod = self._cursor.execute("SELECT * from Phones")
+    #     return self.rows2objects(ph_mod)
+    #
+    # def get_phones_by_breakage(self):
+    #     breakage_name = self._cursor.execute('SELECT * from Phones WHERE name = (?)', (name, ))
+    #     return self.rows2objects(breakage_name)
+    #
+    # def row2object(self, row):
+    #     return MobilePhone(*row[1:])
+    #
+    # def rows2objects(self, rows):
+    #     return [self.row2object(row) for row in rows]
 
 #
 # Mobile_repos = ReposMobPh("C:\Works\Study_qa_auto\qa_auto_python\lesson_31_SQL\homework_base.db")

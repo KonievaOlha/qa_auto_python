@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect("C:\Works\Study_qa_auto\qa_auto_python\lesson_30_SQL\qqqqq.db")
+connection = sqlite3.connect("C:\Works\Study_qa_auto\qa_auto_python\lesson_30_SQL\qqqq232.db")
 
 cur = connection.cursor()
 cur.execute("SELECT * FROM MyTable")

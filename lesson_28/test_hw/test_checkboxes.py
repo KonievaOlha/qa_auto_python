@@ -14,6 +14,7 @@ class TestCheckboxPage:
         self.page.mark_folder("commands")
         self.page.collapse_folder("documents")
         self.page.collapse_folder("workspace")
+        self.page.scroll_down()
         self.page.collapse_folder("office")
         self.page.mark_folder("general")
         audit_text = self.page.result_selected()
